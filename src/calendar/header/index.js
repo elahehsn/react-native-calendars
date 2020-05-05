@@ -160,7 +160,7 @@ class CalendarHeader extends Component {
         importantForAccessibility={this.props.importantForAccessibility} // Android
       >
         <View style={this.style.header}>
-          {leftArrow}
+          
           <View style={{flexDirection: 'row'}}>
             <Text
               allowFontScaling={false}
@@ -172,7 +172,10 @@ class CalendarHeader extends Component {
             </Text>
             {indicator}
           </View>
-          {rightArrow}
+          <View style={this.style.arrowContainer}>
+            {leftArrow} 
+            {rightArrow}
+          </View>
         </View>
         {!this.props.hideDayNames &&
           <View style={this.style.week}>
